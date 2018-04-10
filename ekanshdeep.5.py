@@ -39,7 +39,7 @@ def freeTime(start, end, intervals):
 
     counter = 0
     
-    finVal = -1
+    finVal = start-1
 
     for a in intervals:
         if a[0] > finVal:
@@ -48,6 +48,8 @@ def freeTime(start, end, intervals):
 
 
         finVal = max(finVal, a[1])
+
+    counter += max(0, end - finVal)
 
 
 
